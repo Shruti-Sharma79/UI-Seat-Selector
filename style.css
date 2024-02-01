@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('Movie_back.jpg');
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+  backdrop-filter: grayscale(100%) blur(15px);
+}
+
+.Movie_name {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  margin: 0 20px;
+  position: relative;
+  top: 2%;
+
+}
+
+.Movie_name h1 {
+  font-family: cursive;
+  font-size: 80px;
+  padding: 10px 20px;
+  margin: 5px 5px;
+  text-align: center;
+  color: rgb(234, 255, 0);
+  -webkit-text-stroke: 4px rgb(0, 3, 20);
+}
+
+
+.Movie_name h1 span {
+  font-family: cursive;
+  font-size: 80px;
+  margin-left: 30px;
+  background: linear-gradient(to right, rgb(255, 234, 0), rgb(255, 0, 230));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px rgb(3, 9, 55);
+}
+
+.status {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.status ul {
+  list-style: none;
+}
+
+.status ul li {
+  display: inline;
+  justify-content: center;
+  width: 100%;
+  font-size: 30px;
+  font-style: oblique;
+  font-weight: bolder;
+  padding: 25px 25px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  
+  -webkit-text-stroke: 1.5px rgb(39, 38, 43);
+
+
+}
+
+.status ul li .fa-solid {
+  padding: 15px 15px;
+  font-size: 35px;
+}
+
+.status ul li .couch1 {
+  color: rgb(121, 4, 163);
+}
+
+.status ul li .couch2 {
+  color: rgb(255, 0, 0);
+}
+
+.status ul li .couch3 {
+  color: rgb(0, 0, 0);
+}
+
+
+.Seat_Area{
+  width: 100%;
+  height: 40vh;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.SEATS {
+  border-radius: 5px;
+  /* background: rgb(73, 73, 73); */
+  background-blend-mode: lighten;
+  width: 600px;
+  height: 200px;
+  position: relative;
+  left: 30%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 29px;
+}
+
+.SEATS .left {
+  margin-left: 40px;
+  width: 250px;
+  align-items: center;
+  margin-right: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.SEATS .right {
+  margin-right: 10px;
+  width: 250px;
+  align-items: center;
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.SEATS .right .couch2 {
+  color: rgb(255, 0, 0);
+
+}
+
+.SEATS .left .couch2 {
+  color: rgb(255, 0, 0);
+}
+
+
+/* INPUT FOR DATE AND THE TIME  */
+
+input{
+  display:none;
+}
+
+.timings{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+
+.Movie_date{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dates_item{
+  width: 200px;
+  height:50px; 
+}
+
+.dates_item .date,.day{
+  width: 60px;
+  height:50px;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 188, 188);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.day{
+  font-size: 15px;
+}
+
+.times{
+  margin-top:65px;
+  margin-left: 25px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+}
+
+.time{
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+  width: fit-content;
+  padding: 10px 14px;
+  background: rgb(248, 230, 195);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+.timings input:checked + label{
+  background: rgb(78, 255, 78);
+  color:white;
+}
+
+.price{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.total span{
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.price button{
+  background:linear-gradient(to right, rgb(255, 234, 0), rgb(255, 0, 230)) ;
+  color:white;
+  font-family :poppins;
+  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 5px;
+  outline: none;
+  border:none;
+  cursor:pointer;
+}
